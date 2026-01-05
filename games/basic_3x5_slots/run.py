@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     num_threads = 10
     rust_threads = 20
-    batching_size = 5000
+    batch_size = 5000
     compression = True
     profiling = False
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
             gamestate,
             config,
             num_sim_args,
-            batching_size,
+            batch_size,
             num_threads,
             compression,
             profiling,
