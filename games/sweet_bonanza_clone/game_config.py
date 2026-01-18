@@ -279,3 +279,36 @@ class GameConfig(Config):
                 ],
             ),
         ]
+    
+    def __getstate__(self):
+        """Custom pickle support - save reel file paths instead of loaded reels"""
+        state = self.__dict__.copy()
+        # Store the reel mapping for reconstruction
+        state['_reel_files'] = {
+            "BR0": "BR0.csv",
+            "AR0": "AR0.csv",
+            "FR0": "FR0.csv",
+            "WCAP": "WCAP.csv"
+        }
+        return state
+    
+    def __setstate__(self, state):
+        """Custom unpickle support - reload reels from files"""
+        self.__dict__.update(state)
+        # Reconstruct reels from files if they're missing
+        if not self.reels or len(self.reels) == 0:
+            reel_files = state.get('_reel_files', {
+                "BR0": "BR0.csv",
+                "AR0": "AR0.csv",
+                "FR0": "FR0.csv",
+                "WCAP": "WCAP.csv"
+            })
+            self.reels = {}
+            for r, f in reel_files.items():
+                reel_path = os.path.join(self.reels_path, f)
+                if os.path.exists(reel_path):
+                    self.reels[r] = self.read_reels_csv(reel_path)
+            
+            # Update padding reels after reconstruction
+            self.padding_reels[self.basegame_type] = self.reels.get("BR0", {})
+            self.padding_reels[self.freegame_type] = self.reels.get("FR0", {})
