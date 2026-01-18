@@ -1,0 +1,3 @@
+# Allow library directory for this game (override parent .gitignore)
+!library/
+!library/**

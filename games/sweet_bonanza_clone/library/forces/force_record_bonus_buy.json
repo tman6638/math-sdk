@@ -1,0 +1,413 @@
+[
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 5,
+        "bookIds": [
+            1,
+            195,
+            854,
+            872,
+            973
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 108,
+        "bookIds": [
+            2,
+            9,
+            17,
+            29,
+            36,
+            45,
+            46,
+            56,
+            59,
+            96,
+            99,
+            118,
+            124,
+            130,
+            135,
+            154,
+            156,
+            166,
+            168,
+            169,
+            202,
+            204,
+            213,
+            220,
+            223,
+            231,
+            233,
+            236,
+            253,
+            257,
+            258,
+            263,
+            268,
+            284,
+            299,
+            311,
+            330,
+            332,
+            335,
+            357,
+            367,
+            368,
+            376,
+            383,
+            386,
+            401,
+            415,
+            428,
+            429,
+            434,
+            446,
+            502,
+            504,
+            510,
+            525,
+            534,
+            538,
+            548,
+            549,
+            553,
+            562,
+            578,
+            591,
+            605,
+            609,
+            621,
+            626,
+            627,
+            639,
+            647,
+            660,
+            661,
+            677,
+            694,
+            707,
+            708,
+            709,
+            710,
+            711,
+            715,
+            719,
+            724,
+            744,
+            750,
+            755,
+            761,
+            785,
+            791,
+            795,
+            796,
+            803,
+            807,
+            814,
+            818,
+            847,
+            867,
+            870,
+            872,
+            878,
+            894,
+            897,
+            909,
+            921,
+            939,
+            942,
+            950,
+            952,
+            984
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 4,
+        "bookIds": [
+            40,
+            331,
+            335,
+            679
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "10"
+            },
+            {
+                "name": "symbol",
+                "value": "L1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 3,
+        "bookIds": [
+            68,
+            568,
+            801
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H3"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 5,
+        "bookIds": [
+            73,
+            132,
+            518,
+            710,
+            794
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "L1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 14,
+        "bookIds": [
+            74,
+            107,
+            118,
+            130,
+            167,
+            209,
+            244,
+            282,
+            338,
+            401,
+            633,
+            640,
+            854,
+            889
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 3,
+        "bookIds": [
+            155,
+            351,
+            596
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 8,
+        "bookIds": [
+            155,
+            284,
+            544,
+            596,
+            639,
+            647,
+            790,
+            889
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 2,
+        "bookIds": [
+            189,
+            464
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L3"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 5,
+        "bookIds": [
+            284,
+            336,
+            618,
+            712,
+            831
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "freegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "L2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 1,
+        "bookIds": [
+            516
+        ]
+    }
+]
