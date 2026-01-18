@@ -11,6 +11,8 @@ class GameState(GameStateOverride):
         """
         Execute a single base game spin with tumbling mechanics.
         
+        For bonus buy modes, skip base game and go directly to free spins.
+        
         Flow:
         1. Draw initial board
         2. Evaluate scatter pays
@@ -21,6 +23,24 @@ class GameState(GameStateOverride):
         self.reset_seed(sim)
         self.repeat = True
         
+        # Check if this is a bonus buy mode - if so, skip to bonus
+        if self.get_current_betmode().get_buybonus():
+            # Bonus buy: go directly to free spins
+            while self.repeat:
+                self.reset_book()
+                # Mark that we triggered freegame for validation
+                self.triggered_freegame = True
+                # Award 10 free spins for bonus buy
+                self.tot_fs = 10
+                # Run the free spin bonus
+                self.run_freespin()
+                # Finalize
+                self.evaluate_finalwin()
+                self.check_repeat()
+            self.imprint_wins()
+            return
+        
+        # Normal base game flow
         while self.repeat:
             self.reset_book()
             self.draw_board()

@@ -173,60 +173,14 @@ class GameConfig(Config):
                 is_buybonus=False,
                 distributions=[
                     Distribution(
-                        criteria="wincap",
-                        quota=0.001,
-                        win_criteria=self.wincap,
-                        conditions={
-                            "reel_weights": {
-                                self.basegame_type: {"BR0": 1},
-                                self.freegame_type: {"FR0": 1, "WCAP": 5},
-                            },
-                            "mult_values": {
-                                self.basegame_type: {1: 1},  # No multipliers in base
-                                self.freegame_type: self.standard_mult_weights,
-                            },
-                            "scatter_triggers": {4: 1, 5: 1, 6: 1},
-                            "force_wincap": True,
-                            "force_freegame": True,
-                        },
-                    ),
-                    Distribution(
-                        criteria="freegame",
-                        quota=0.1,
-                        conditions={
-                            "reel_weights": {
-                                self.basegame_type: {"BR0": 1},
-                                self.freegame_type: {"FR0": 1},
-                            },
-                            "scatter_triggers": {4: 5, 5: 2, 6: 1},
-                            "mult_values": {
-                                self.basegame_type: {1: 1},
-                                self.freegame_type: self.standard_mult_weights,
-                            },
-                            "force_wincap": False,
-                            "force_freegame": True,
-                        },
-                    ),
-                    Distribution(
-                        criteria="0",
-                        quota=0.4,
-                        win_criteria=0.0,
-                        conditions={
-                            "reel_weights": {self.basegame_type: {"BR0": 1}},
-                            "mult_values": {
-                                self.basegame_type: {1: 1},
-                                self.freegame_type: self.standard_mult_weights,
-                            },
-                            "force_wincap": False,
-                            "force_freegame": False,
-                        },
-                    ),
-                    Distribution(
                         criteria="basegame",
-                        quota=0.5,
+                        quota=1.0,
                         conditions={
                             "reel_weights": {self.basegame_type: {"BR0": 1}},
-                            "mult_values": {self.basegame_type: {1: 1}},
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: self.standard_mult_weights,
+                            },
                             "force_wincap": False,
                             "force_freegame": False,
                         },
@@ -244,60 +198,14 @@ class GameConfig(Config):
                 is_buybonus=False,
                 distributions=[
                     Distribution(
-                        criteria="wincap",
-                        quota=0.001,
-                        win_criteria=self.wincap,
-                        conditions={
-                            "reel_weights": {
-                                self.basegame_type: {"AR0": 1},  # Use ante reels
-                                self.freegame_type: {"FR0": 1, "WCAP": 5},
-                            },
-                            "mult_values": {
-                                self.basegame_type: {1: 1},
-                                self.freegame_type: self.standard_mult_weights,
-                            },
-                            "scatter_triggers": {4: 1, 5: 1, 6: 1},
-                            "force_wincap": True,
-                            "force_freegame": True,
-                        },
-                    ),
-                    Distribution(
-                        criteria="freegame",
-                        quota=0.15,  # Higher bonus frequency
-                        conditions={
-                            "reel_weights": {
-                                self.basegame_type: {"AR0": 1},
-                                self.freegame_type: {"FR0": 1},
-                            },
-                            "scatter_triggers": {4: 5, 5: 2, 6: 1},
-                            "mult_values": {
-                                self.basegame_type: {1: 1},
-                                self.freegame_type: self.standard_mult_weights,
-                            },
-                            "force_wincap": False,
-                            "force_freegame": True,
-                        },
-                    ),
-                    Distribution(
-                        criteria="0",
-                        quota=0.35,
-                        win_criteria=0.0,
-                        conditions={
-                            "reel_weights": {self.basegame_type: {"AR0": 1}},
-                            "mult_values": {
-                                self.basegame_type: {1: 1},
-                                self.freegame_type: self.standard_mult_weights,
-                            },
-                            "force_wincap": False,
-                            "force_freegame": False,
-                        },
-                    ),
-                    Distribution(
                         criteria="basegame",
-                        quota=0.5,
+                        quota=1.0,
                         conditions={
-                            "reel_weights": {self.basegame_type: {"AR0": 1}},
-                            "mult_values": {self.basegame_type: {1: 1}},
+                            "reel_weights": {self.basegame_type: {"AR0": 1}},  # Use ante reels
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: self.standard_mult_weights,
+                            },
                             "force_wincap": False,
                             "force_freegame": False,
                         },
@@ -315,38 +223,19 @@ class GameConfig(Config):
                 is_buybonus=True,
                 distributions=[
                     Distribution(
-                        criteria="wincap",
-                        quota=0.001,
-                        win_criteria=self.wincap,
-                        conditions={
-                            "reel_weights": {
-                                self.basegame_type: {"BR0": 1},
-                                self.freegame_type: {"FR0": 1, "WCAP": 5},
-                            },
-                            "mult_values": {
-                                self.basegame_type: {1: 1},
-                                self.freegame_type: self.standard_mult_weights,
-                            },
-                            "scatter_triggers": {4: 1},
-                            "force_wincap": True,
-                            "force_freegame": True,
-                        },
-                    ),
-                    Distribution(
                         criteria="freegame",
-                        quota=0.999,
+                        quota=1.0,
                         conditions={
                             "reel_weights": {
                                 self.basegame_type: {"BR0": 1},
                                 self.freegame_type: {"FR0": 1},
                             },
-                            "scatter_triggers": {4: 1},
                             "mult_values": {
                                 self.basegame_type: {1: 1},
                                 self.freegame_type: self.standard_mult_weights,
                             },
                             "force_wincap": False,
-                            "force_freegame": True,
+                            "force_freegame": False,  # Bonus buy skips base, no need to force
                         },
                     ),
                 ],
@@ -362,38 +251,19 @@ class GameConfig(Config):
                 is_buybonus=True,
                 distributions=[
                     Distribution(
-                        criteria="wincap",
-                        quota=0.001,
-                        win_criteria=self.wincap,
-                        conditions={
-                            "reel_weights": {
-                                self.basegame_type: {"BR0": 1},
-                                self.freegame_type: {"FR0": 1, "WCAP": 5},
-                            },
-                            "mult_values": {
-                                self.basegame_type: {1: 1},
-                                self.freegame_type: self.super_mult_weights,
-                            },
-                            "scatter_triggers": {4: 1},
-                            "force_wincap": True,
-                            "force_freegame": True,
-                        },
-                    ),
-                    Distribution(
                         criteria="freegame",
-                        quota=0.999,
+                        quota=1.0,
                         conditions={
                             "reel_weights": {
                                 self.basegame_type: {"BR0": 1},
                                 self.freegame_type: {"FR0": 1},
                             },
-                            "scatter_triggers": {4: 1},
                             "mult_values": {
                                 self.basegame_type: {1: 1},
                                 self.freegame_type: self.super_mult_weights,
                             },
                             "force_wincap": False,
-                            "force_freegame": True,
+                            "force_freegame": False,  # Bonus buy skips base, no need to force
                         },
                     ),
                 ],

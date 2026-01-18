@@ -50,13 +50,17 @@ class GameExecutables(GameCalculations):
             total_mult, mult_info = self.collect_multipliers_from_board()
             
             if len(mult_info) > 0:
-                # Save base tumble win before multiplier
+                # Save base tumble win and current spin win before multiplier
                 base_tumble_win = copy(self.win_manager.tumble_win)
+                old_spin_win = copy(self.win_manager.spin_win)
                 
                 # Apply multiplier to tumble win
                 multiplied_win = base_tumble_win * total_mult
                 self.win_manager.tumble_win = multiplied_win
-                self.win_manager.spin_win = self.win_manager.spin_win - base_tumble_win + multiplied_win
+                
+                # Calculate new spin win and update using set_spin_win to maintain consistency
+                new_spin_win = old_spin_win - base_tumble_win + multiplied_win
+                self.win_manager.set_spin_win(new_spin_win)
                 
                 # Emit multiplier collect event
                 send_multiplier_collect_event(
