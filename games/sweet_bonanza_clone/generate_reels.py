@@ -12,51 +12,50 @@ NUM_REELS = 6
 # Symbol pools with frequencies (higher weight = more common)
 # For a 6x5 tumbling game targeting 96% RTP, we need good hit rates
 
-# Base game symbols - HIGH frequency for scatter-pay (need 8+ matches)
+# Base game symbols - VERY HIGH frequency for 8+ scatter-pay matches
+# With 30 positions and 8-symbol minimum, need ~27% frequency minimum
+# Using only 4 symbols (2 high, 2 low) plus specials for better clustering
 BASE_SYMBOLS = {
-    # High pays (still lower than low pays)
-    'H1': 25,  
-    'H2': 30,
-    'H3': 35,
-    'H4': 40,
-    # Low pays (highest frequency - these drive base wins)
+    # Only use 4 paying symbols for better concentration
+    # High pays
+    'H3': 70,   # ~23% - will cluster to 8+ sometimes
+    'H4': 75,   # ~25% - will cluster to 8+ sometimes
+    # Low pays - highest frequency
+    'L3': 85,   # ~28% - best chance for 8+
+    'L4': 90,   # ~30% - best chance for 8+
+    # Special symbols
+    'S': 30,    # ~10% scatter for bonus trigger (3 scatters avg per spin)
+    'W': 25,    # ~8% wild helps create wins
+}
+# Note: H1, H2, L1, L2 will NOT appear in base game to concentrate wins
+
+# Ante game symbols - increased scatter frequency
+# Same 4 paying symbols but more scatters
+ANTE_SYMBOLS = {
+    'H3': 65,
+    'H4': 70,
+    'L3': 80,
+    'L4': 85,
+    'S': 50,  # Much higher scatter frequency (5 scatters avg per spin for bonus)
+    'W': 25,
+}
+
+# Free spin symbols - ALL symbols active with high multipliers
+# Free spins need BIG wins to justify the buy-in cost
+FREE_SYMBOLS = {
+    # All 8 paying symbols active in free spins for variety
+    'H1': 45,
+    'H2': 50,
+    'H3': 55,
+    'H4': 60,
     'L1': 50,
     'L2': 55,
     'L3': 60,
     'L4': 65,
-    # Special symbols
-    'S': 22,  # Scatter - for bonus trigger
-    'W': 20,  # Wild - helps create wins
-}
-
-# Ante game symbols - increased scatter frequency
-ANTE_SYMBOLS = {
-    'H1': 25,
-    'H2': 30,
-    'H3': 35,
-    'H4': 40,
-    'L1': 48,
-    'L2': 52,
-    'L3': 56,
-    'L4': 60,
-    'S': 35,  # Much higher scatter frequency vs base
-    'W': 20,
-}
-
-# Free spin symbols - includes multiplier bombs
-# Need very high wins in free spins since they cost 100x/500x to buy
-FREE_SYMBOLS = {
-    'H1': 35,   # High frequency for big wins
-    'H2': 40,
-    'H3': 45,
-    'H4': 50,
-    'L1': 48,
-    'L2': 52,
-    'L3': 56,
-    'L4': 60,
-    'S': 18,  # Scatters for retrigger (3+ = +5 spins)
-    'W': 25,
-    'M': 25,  # Multiplier bombs
+    # Specials
+    'S': 25,   # Scatters for retrigger
+    'W': 30,   # More wilds in free spins
+    'M': 40,   # Lots of multiplier bombs for big wins
 }
 
 # Win cap symbols - very high frequency for forced wins

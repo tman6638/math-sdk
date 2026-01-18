@@ -49,12 +49,14 @@ class GameState(GameStateOverride):
             self.get_scatterpays_update_wins()
             self.emit_tumble_win_events()
 
-            # Continue tumbling while there are wins
-            while self.win_data["totalWin"] > 0 and not (self.wincap_triggered):
+            # Continue tumbling while there are wins (with safety limit)
+            tumble_count = 0
+            max_tumbles = 50  # Safety limit to prevent infinite loops
+            while self.win_data["totalWin"] > 0 and not (self.wincap_triggered) and tumble_count < max_tumbles:
                 self.tumble_game_board()
                 self.get_scatterpays_update_wins()
                 self.emit_tumble_win_events()
-
+                tumble_count += 1
             # Finalize spin
             self.set_end_tumble_event()
             self.win_manager.update_gametype_wins(self.gametype)
@@ -95,11 +97,14 @@ class GameState(GameStateOverride):
             self.get_scatterpays_update_wins()
             self.emit_tumble_win_events()  # This also collects/applies multipliers
 
-            # Continue tumbling while there are wins
-            while self.win_data["totalWin"] > 0 and not (self.wincap_triggered):
+            # Continue tumbling while there are wins (with safety limit)
+            tumble_count = 0
+            max_tumbles = 50  # Safety limit to prevent infinite loops
+            while self.win_data["totalWin"] > 0 and not (self.wincap_triggered) and tumble_count < max_tumbles:
                 self.tumble_game_board()
                 self.get_scatterpays_update_wins()
                 self.emit_tumble_win_events()  # Multipliers applied each tumble
+                tumble_count += 1
 
             # Finalize spin
             self.set_end_tumble_event()
