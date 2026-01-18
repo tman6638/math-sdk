@@ -19,12 +19,12 @@ if __name__ == "__main__":
     profiling = False
 
     # Number of simulations per bet mode
-    # Start with small test to verify it works
+    # Run comprehensive tests to achieve 96.4% RTP target
     num_sim_args = {
-        "base": 10,
-        "ante": 10,
-        "bonus_buy": 10,
-        "super_bonus": 10,
+        "base": 100000,
+        "ante": 100000,
+        "bonus_buy": 100000,
+        "super_bonus": 100000,
     }
 
     # Control which steps to run

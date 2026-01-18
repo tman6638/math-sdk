@@ -22,9 +22,9 @@ class GameConfig(Config):
         self.game_name = "sweet_bonanza_clone"
         self.provider_number = 0
         self.working_name = "Sweet Bonanza Clone - Tumbling Slot"
-        self.wincap = 5000.0
+        self.wincap = 10000.0  # Max win 10,000x
         self.win_type = "scatter"
-        self.rtp = 0.9600
+        self.rtp = 0.9640  # Target 96.4% RTP
         
         # Call construct_paths - handle both versions
         try:
@@ -41,44 +41,45 @@ class GameConfig(Config):
         self.num_reels = 6
         self.num_rows = [5] * self.num_reels
         
-        # Paytable - Scatter pay groupings
+        # Paytable - Scatter pay groupings (REDUCED for 96.4% RTP)
         # Groups: (8-9), (10-11), (12-14), (15+)
+        # Values reduced by ~70% from original to balance RTP with tumbling
         t1, t2, t3, t4 = (8, 9), (10, 11), (12, 14), (15, 30)
         pay_group = {
-            # High pays (candy symbols)
-            (t1, "H1"): 10.0,
-            (t2, "H1"): 25.0,
-            (t3, "H1"): 50.0,
-            (t4, "H1"): 500.0,
-            (t1, "H2"): 8.0,
-            (t2, "H2"): 20.0,
-            (t3, "H2"): 40.0,
-            (t4, "H2"): 250.0,
-            (t1, "H3"): 5.0,
-            (t2, "H3"): 15.0,
-            (t3, "H3"): 30.0,
-            (t4, "H3"): 150.0,
-            (t1, "H4"): 4.0,
-            (t2, "H4"): 10.0,
-            (t3, "H4"): 20.0,
-            (t4, "H4"): 100.0,
-            # Low pays (fruit symbols)
-            (t1, "L1"): 2.5,
-            (t2, "L1"): 5.0,
-            (t3, "L1"): 10.0,
-            (t4, "L1"): 50.0,
-            (t1, "L2"): 2.0,
-            (t2, "L2"): 4.0,
-            (t3, "L2"): 8.0,
-            (t4, "L2"): 40.0,
-            (t1, "L3"): 1.5,
-            (t2, "L3"): 3.0,
-            (t3, "L3"): 6.0,
-            (t4, "L3"): 30.0,
-            (t1, "L4"): 1.0,
-            (t2, "L4"): 2.0,
-            (t3, "L4"): 4.0,
-            (t4, "L4"): 20.0,
+            # High pays (candy symbols) - reduced significantly
+            (t1, "H1"): 2.5,   # was 10.0
+            (t2, "H1"): 6.0,   # was 25.0
+            (t3, "H1"): 12.0,  # was 50.0
+            (t4, "H1"): 100.0, # was 500.0
+            (t1, "H2"): 2.0,   # was 8.0
+            (t2, "H2"): 5.0,   # was 20.0
+            (t3, "H2"): 10.0,  # was 40.0
+            (t4, "H2"): 60.0,  # was 250.0
+            (t1, "H3"): 1.5,   # was 5.0
+            (t2, "H3"): 4.0,   # was 15.0
+            (t3, "H3"): 8.0,   # was 30.0
+            (t4, "H3"): 40.0,  # was 150.0
+            (t1, "H4"): 1.2,   # was 4.0
+            (t2, "H4"): 3.0,   # was 10.0
+            (t3, "H4"): 6.0,   # was 20.0
+            (t4, "H4"): 25.0,  # was 100.0
+            # Low pays (fruit symbols) - reduced significantly
+            (t1, "L1"): 0.8,   # was 2.5
+            (t2, "L1"): 2.0,   # was 5.0
+            (t3, "L1"): 4.0,   # was 10.0
+            (t4, "L1"): 15.0,  # was 50.0
+            (t1, "L2"): 0.6,   # was 2.0
+            (t2, "L2"): 1.5,   # was 4.0
+            (t3, "L2"): 3.0,   # was 8.0
+            (t4, "L2"): 12.0,  # was 40.0
+            (t1, "L3"): 0.5,   # was 1.5
+            (t2, "L3"): 1.2,   # was 3.0
+            (t3, "L3"): 2.5,   # was 6.0
+            (t4, "L3"): 10.0,  # was 30.0
+            (t1, "L4"): 0.4,   # was 1.0
+            (t2, "L4"): 1.0,   # was 2.0
+            (t3, "L4"): 2.0,   # was 4.0
+            (t4, "L4"): 8.0,   # was 20.0
         }
         self.paytable = self.convert_range_table(pay_group)
 
