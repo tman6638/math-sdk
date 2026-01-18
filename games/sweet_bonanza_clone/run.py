@@ -14,16 +14,17 @@ if __name__ == "__main__":
     # Execution parameters
     num_threads = 10
     rust_threads = 20
-    batching_size = 10000
+    batch_size = 10000
     compression = True
     profiling = False
 
     # Number of simulations per bet mode
+    # Increased to 100,000 for better RTP accuracy
     num_sim_args = {
-        "base": int(1e4),
-        "ante": int(1e4),
-        "bonus_buy": int(1e4),
-        "super_bonus": int(1e4),
+        "base": int(1e5),
+        "ante": int(1e5),
+        "bonus_buy": int(1e5),
+        "super_bonus": int(1e5),
     }
 
     # Control which steps to run
@@ -51,7 +52,7 @@ if __name__ == "__main__":
             gamestate,
             config,
             num_sim_args,
-            batching_size,
+            batch_size,
             num_threads,
             compression,
             profiling,
