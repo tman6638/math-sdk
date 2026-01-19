@@ -86,4 +86,4 @@ if __name__ == "__main__":
         execute_all_tests(config)
 
     print("\n=== Sweet Bonanza Clone - Execution Complete ===")
-    print(f"Output files can be found in: {config.library_path}")
+    print(f"Output files (books and lookup tables) can be found in: {config.publish_path}")
