@@ -12,7 +12,7 @@ from game_config import GameConfig
 # from game_optimization import OptimizationSetup  # Commented out - version incompatibility
 # from optimization_program.run_script import OptimizationExecution
 # from utils.game_analytics.run_analysis import create_stat_sheet
-# from utils.rgs_verification import execute_all_tests
+from utils.rgs_verification import execute_all_tests
 from src.state.run_sims import create_books
 from src.write_data.write_configs import generate_configs
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         "run_sims": True,
         "run_optimization": False,  # Skip for now
         "run_analysis": False,  # Skip for now
-        "run_format_checks": False,  # Skip for now
+        "run_format_checks": True,  # Enable to catch payout mismatches
     }
     
     # Target bet modes to process
@@ -81,9 +81,9 @@ if __name__ == "__main__":
     #     create_stat_sheet(gamestate, custom_keys=custom_keys)
 
     # Step 4: Run format checks/verification
-    # if run_conditions["run_format_checks"]:
-    #     print("\n=== Running Format Checks ===")
-    #     execute_all_tests(config)
+    if run_conditions["run_format_checks"]:
+        print("\n=== Running Format Checks ===")
+        execute_all_tests(config)
 
     print("\n=== Sweet Bonanza Clone - Execution Complete ===")
-    print(f"Output files can be found in: {config.game_path}/outputs/")
+    print(f"Output files (books and lookup tables) can be found in: {config.publish_path}")
