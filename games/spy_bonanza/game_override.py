@@ -20,6 +20,7 @@ class GameStateOverride(GameExecutables):
     def reset_ultra_fs_spin(self):
         """Reset for ultra bonus."""
         super().reset_fs_spin()
+        self.gametype = "ultra_freegame"
         self.global_multiplier = 1
         self.bonus_type = "ultra"
 

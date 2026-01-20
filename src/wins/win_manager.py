@@ -45,7 +45,7 @@ class WinManager:
         """Assigns wins to a specific gametype."""
         if self.base_game_mode.lower() == gametype.lower():
             self.basegame_wins += self.spin_win
-        elif self.free_game_mode.lower() == gametype.lower():
+        elif gametype.lower() in {self.free_game_mode.lower(), "ultra_freegame"}:
             self.freegame_wins += self.spin_win
         else:
             raise RuntimeError("Must define a valid gametype")
