@@ -262,3 +262,8 @@ def enter_bonus_event(gamestate) -> None:
         "reason": gamestate.bonus_type,
     }
     gamestate.book.add_event(event)
+
+
+def add_new_event(gamestate, event: dict) -> None:
+    """Compatibility helper for custom game events."""
+    gamestate.book.add_event(event)

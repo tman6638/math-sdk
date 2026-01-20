@@ -199,7 +199,17 @@ class Board(GeneralGameState):
             self.get_current_distribution_conditions()["force_freegame"]
             and self.gametype == self.config.basegame_type
         ):
-            num_scatters = get_random_outcome(self.get_current_distribution_conditions()["scatter_triggers"])
+            conditions = self.get_current_distribution_conditions()
+            trigger_key = "scatter_triggers"
+            if trigger_symbol != "scatter":
+                trigger_key = f"{trigger_symbol}_triggers"
+            elif "scatter_triggers" not in conditions and "ultra_scatter_triggers" in conditions:
+                trigger_symbol = "ultra_scatter"
+                trigger_key = "ultra_scatter_triggers"
+            trigger_weights = conditions.get(trigger_key)
+            if trigger_weights is None:
+                raise KeyError(f"{trigger_key} missing from distribution conditions.")
+            num_scatters = get_random_outcome(trigger_weights)
             self.force_special_board(trigger_symbol, num_scatters)
         elif (
             not (self.get_current_distribution_conditions()["force_freegame"])

@@ -206,7 +206,11 @@ class GameConfig(Config):
                         quota=0.40,
                         win_criteria=0.0,
                         conditions={
-                            "reel_weights": {self.basegame_type: {"BR0": 1}},
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"FR0": 1},
+                                "ultra_freegame": {"UFR0": 1},
+                            },
                             "mult_values": {self.basegame_type: {}},
                             "force_wincap": False,
                             "force_freegame": False,
@@ -217,7 +221,11 @@ class GameConfig(Config):
                         criteria="basegame",
                         quota=0.499,
                         conditions={
-                            "reel_weights": {self.basegame_type: {"BR0": 1}},
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"FR0": 1},
+                                "ultra_freegame": {"UFR0": 1},
+                            },
                             "mult_values": {self.basegame_type: {}},
                             "force_wincap": False,
                             "force_freegame": False,
