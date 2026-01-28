@@ -1,0 +1,498 @@
+[
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "11"
+            },
+            {
+                "name": "symbol",
+                "value": "L4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 1,
+        "bookIds": [
+            1
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 3,
+        "bookIds": [
+            2,
+            17,
+            18
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "L3"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 3,
+        "bookIds": [
+            4,
+            56,
+            83
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 5,
+        "bookIds": [
+            6,
+            17,
+            18,
+            33,
+            58
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "10"
+            },
+            {
+                "name": "symbol",
+                "value": "L4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 2,
+        "bookIds": [
+            10,
+            34
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "L4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 9,
+        "bookIds": [
+            13,
+            24,
+            33,
+            43,
+            69,
+            73,
+            78,
+            84,
+            97
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 3,
+        "bookIds": [
+            17,
+            36,
+            48
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 6,
+        "bookIds": [
+            18,
+            42,
+            56,
+            63,
+            83,
+            95
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 5,
+        "bookIds": [
+            18,
+            32,
+            34,
+            63,
+            79
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "L1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 2,
+        "bookIds": [
+            31,
+            48
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H3"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 3,
+        "bookIds": [
+            31,
+            40,
+            73
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "H4"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 2,
+        "bookIds": [
+            39,
+            49
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "L3"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 4,
+        "bookIds": [
+            39,
+            44,
+            82,
+            93
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "H2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 2,
+        "bookIds": [
+            43,
+            89
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "8"
+            },
+            {
+                "name": "symbol",
+                "value": "H1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 5,
+        "bookIds": [
+            44,
+            75,
+            79,
+            93,
+            94
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "L2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 1,
+        "bookIds": [
+            45
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "9"
+            },
+            {
+                "name": "symbol",
+                "value": "H3"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 1,
+        "bookIds": [
+            84
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "10"
+            },
+            {
+                "name": "symbol",
+                "value": "L1"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 1,
+        "bookIds": [
+            91
+        ]
+    },
+    {
+        "search": [
+            {
+                "name": "gametype",
+                "value": "basegame"
+            },
+            {
+                "name": "kind",
+                "value": "10"
+            },
+            {
+                "name": "symbol",
+                "value": "L2"
+            },
+            {
+                "name": "totalMult",
+                "value": "2"
+            }
+        ],
+        "timesTriggered": 1,
+        "bookIds": [
+            98
+        ]
+    }
+]
